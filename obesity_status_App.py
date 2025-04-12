@@ -11,7 +11,7 @@ st.write("""
 """)
 st.write('---')
 
-df = pd.read_csv('/Users/balogunishaq/Desktop/My Project/ObesityDataset.csv') 
+df = pd.read_csv('ObesityDataset.csv') 
 st.sidebar.header("User Input Features")
 
 # Collect User Input Features Into dataframe
