@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import os
 
 # Streamlit App Interface
 st.write("""
@@ -65,7 +66,10 @@ else:
     st.write(input_df)
 
 # Load the saved model
-load_clf = pickle.load(open('RF_classifier.sav', 'rb'))
+model_path = os.path.join(os.path.dirname(__file__), 'RF_classifier.sav')
+with open(model_path, 'rb') as model_file:
+    load_clf = pickle.load(model_file)
+#load_clf = pickle.load(open('RF_classifier.sav', 'rb'))
 
 # Only predict when the button is clicked
 if st.button("Predict"):
