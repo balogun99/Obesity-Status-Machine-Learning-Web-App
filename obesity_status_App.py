@@ -65,7 +65,7 @@ else:
     st.write(input_df)
 
 # Load the saved model
-load_clf = pickle.load(open('/Users/balogunishaq/Desktop/My Project/RF_classifier.sav', 'rb'))
+load_clf = pickle.load(open('RF_classifier.sav', 'rb'))
 
 # Only predict when the button is clicked
 if st.button("Predict"):
